@@ -9,13 +9,19 @@ export const metadata = {
 }
 
 export default function Layout({ children }) {
-  console.log('Rendering Layout');
   return (
-    <div>
-      <StateContext>
-        {children}
-      </StateContext>
-    </div>
+    <html lang="en">
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+      </head>
+      <body>
+        <StateContext>
+          {children}
+        </StateContext>
+      </body>
+    </html>
   );
 }
-
