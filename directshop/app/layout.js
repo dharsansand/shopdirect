@@ -9,10 +9,13 @@ export const metadata = {
 }
 
 export default function Layout({ children }) {
-  return <div>
-    <StateContext>
-
-    {children}
-    </StateContext>
-    </div>;
+  console.log('Rendering Layout');
+  return (
+    <div>
+      <StateContext>
+        {children}
+      </StateContext>
+    </div>
+  );
 }
+
